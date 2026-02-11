@@ -2,7 +2,7 @@ const io = require("socket.io-client");
 const robot = require("robotjs");
 const readline = require("readline");
 
-const SERVER_URL = "https://smart-remote-server.onrender.com";
+const SERVER_URL = process.env.DISPLAY_CONNECTION_URL || "http://localhost:3001";
 
 const rl = readline.createInterface({
   input: process.stdin,
